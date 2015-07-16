@@ -12,8 +12,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 
 
-import javax.swing.ImageIcon;
-import javax.swing.JPanel;
+import javax.swing.*;
 import java.awt.*;
 import org.j2dmonopoly.game.J2DMonopoly;
 import org.j2dmonopoly.game.player.Dice;
@@ -42,6 +41,7 @@ public class GameBoard extends JPanel
     public long time;
     public long starttime;
     public long dif;
+
     private static final long serialVersionUID = 1L;
     // IMAGES
     private ImageIcon board; // board image.
@@ -155,7 +155,7 @@ public class GameBoard extends JPanel
             {
                 leftDiceNumber = leftDiceFrame + 1;
                 rightDiceNumber = rightDiceFrame + 1;
-                if(leftDiceNumber>1){
+                if(true){
                     movetest(game.getPlayers()[2]);
                     // playbkg();
                 }
@@ -390,8 +390,11 @@ public class GameBoard extends JPanel
     }
     public void movetest(Player player){
         //player.setX(player.getX()+100);
-       new mover(player);
-        play();
+      //  JOptionPane.showMessageDialog(null, "Thank you for using Java", "Yay, java", JOptionPane.PLAIN_MESSAGE);
+     //  new downmover(player);
+        new gmover(player).moveit(19);
+
+        //play();
     }
     public static void play(){
         AudioPlayer MGP=AudioPlayer.player;

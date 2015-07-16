@@ -34,6 +34,8 @@ public class Player
 	private boolean spaceEventFired;
 	private boolean playerTurn;
 	private boolean spacePressed, spaceReleased;
+    private int position=0;
+    private boolean ismoving=false;
 
 	public Player(final J2DMonopoly game, final String name, final int tokenID)
 	{
@@ -49,6 +51,15 @@ public class Player
     public int getheight(){
         return this.height;
     }
+    public void setposition(int p){this.position=p;}
+    public int getposition(){return this.position;}
+    public void moveon(){this.ismoving=true;
+       // System.out.println("on");
+       }
+    public void moveoff(){this.ismoving=false;
+     //   System.out.println("off");
+     }
+    public boolean getismoving(){return this.ismoving;}
 
 
 	public void update()

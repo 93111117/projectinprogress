@@ -30,7 +30,7 @@ public class GameWindow
 		frame.pack();
 
 		frame.setLocationRelativeTo(null);
-		frame.setAlwaysOnTop(true);
+		//frame.setAlwaysOnTop(true);
 	}
 
 	public KeyAdapter inputHandler = new KeyAdapter()
